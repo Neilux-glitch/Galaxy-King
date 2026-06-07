@@ -37,10 +37,8 @@ module.exports = {
     // 📩 APPLY SYSTEM
     if (interaction.customId === 'apply_staff') {
 
-      await interaction.reply({
-        content: '📩 Creando tu postulación...',
-        ephemeral: true
-      });
+      await interaction.deferReply({ ephemeral: true });
+      await interaction.editReply('📩 Postulación creada correctamente');
 
       const channel = await guild.channels.create({
         name: `apply-${user.username}`,
@@ -63,11 +61,10 @@ module.exports = {
 
       // 🌌 INTRO EMBED
       const intro = new EmbedBuilder()
-        .setTitle('﹒ㅤ⨯ㅤGalaxy Applicationsㅤ﹐ㅤ⟢')
+        .setTitle('﹒ㅤ⨯ㅤTicket abiertoㅤ﹐ㅤ⟢')
         .setColor(0x8E44AD)
-        .setThumbnail(interaction.guild.iconURL())
         .setDescription(
-`> <a:violet:1510958154052145252> **Bienvenido/a al sistema de postulaciones de Galaxy King.**
+`> <a:violet:1510958154052145252> **Bienvenido/a al sistema de postulaciones de Twings Star.**
 
 > Aquí iniciarás tu proceso para formar parte del staff del servidor.
 
@@ -117,7 +114,6 @@ module.exports = {
 💬 ¿Cómo actuarías ante un problema entre usuarios?
 
 ◞ ྀི◟ ͜ ◞ ྀི◟ ͜ ◞ ྀི◟
-
 🧠 Explica cómo resolverías conflictos`
       );
 
@@ -127,11 +123,10 @@ module.exports = {
 
 Gracias por completar tu postulación ${user}.
 
-👑 El equipo de Twings Star revisará tu solicitud pronto.
+👑 El equipo de **__Twings star__** revisará tu solicitud pronto.
 
 ────────────────────
 ✨ Si eres seleccionado, serás contactado en este mismo canal o por DM.
-
 ◞ ྀི◟ ͜ ◞ ྀི◟ ͜ ◞ ྀི◟`
       );
 
