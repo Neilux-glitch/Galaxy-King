@@ -11,6 +11,8 @@ const client = new Client({
   ]
 });
 
+console.log("GALAXY SECURITY V2");
+
 // ⚙️ cargar eventos
 const eventsPath = path.join(__dirname, 'events');
 
