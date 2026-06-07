@@ -127,7 +127,7 @@ module.exports = {
 
 Gracias por completar tu postulación ${user}.
 
-👑 El equipo de Galaxy King revisará tu solicitud pronto.
+👑 El equipo de Twings Star revisará tu solicitud pronto.
 
 ────────────────────
 ✨ Si eres seleccionado, serás contactado en este mismo canal o por DM.
